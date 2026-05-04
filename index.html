@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>profile card test</title>
+</head>
+<body> 
+
+<div class="card">
+
+    <div class="badge">OFFLINE</div>
+
+    <div class="profile-pic"></div>
+
+    <h2> Teo Uchaneisvhili </h2>
+
+    <p>Frontend learner 🚀</p>
+
+    <button id="followBtn">Follow</button>  
+
+<div class="badge" id="status">ONLINE</div>
+<button id="toggleBtn">Toggle</button>
+
+
+</div>  
+ 
+  <script>
+
+const followBtn = document.getElementById("followBtn");
+
+followBtn.addEventListener("click", function () {
+    if (followBtn.innerText === "Follow") {
+        followBtn.innerText = "Following";
+        followBtn.classList.add("following");
+    } else {
+        followBtn.innerText = "Follow";
+        followBtn.classList.remove("following");
+    }
+});
+
+const status = document.getElementById("status");
+const toggleBtn = document.getElementById("toggleBtn");
+
+let isOnline = true;
+
+toggleBtn.addEventListener("click", function () {
+
+    if (isOnline) {
+        status.innerText = "OFFLINE";
+        status.classList.add("offline");
+        isOnline = false;
+    } else {
+        status.innerText = "ONLINE";
+        status.classList.remove("offline");
+        isOnline = true;
+    }
+
+});
+</script>
+
+
+<style> 
+
+.card {
+    position: relative;
+    background: #34eba8;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 250px;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    
+
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    display: block;
+    margin: 15px auto 0 auto; 
+} 
+
+button:hover {
+    background-color: #34bdeb;
+}
+
+button:active {
+    transform: scale(0.95);
+}  
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+} 
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+} 
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    background-color: green;
+}
+
+.badge.offline {
+    background-color: red;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
