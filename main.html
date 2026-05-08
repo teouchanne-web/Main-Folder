@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MBG Group</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+      body {
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+
+        /* BACKGROUND */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image: url("bgg.jpg");
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            transform: scale(1.1);
+            z-index: -1;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(200, 204, 207, 0.5);
+            box-sizing: border-box; 
+            backdrop-filter: blur(1px);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #144e6e;
+        }
+
+        nav a {
+            color: #144e6e;
+            text-decoration: none;
+            margin: 0 16px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f0c040;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 40px;
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            margin-bottom: 20px;
+            color: #144e6e;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .btn {
+            background-color: #f0c040;
+            color: #1a1a1a;
+            padding: 14px 36px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #144e6e;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: transparent;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+        } 
+
+.services {
+    display: flex;
+    gap: 24px;
+    padding: 80px 60px;
+    justify-content: center;
+}
+
+.service-card {
+    background-color: rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    max-width: 280px;
+    backdrop-filter: blur(10px);
+}
+
+.icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.service-card h3 {
+    color: #144e6e;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85)
+
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">MBG Group</div>
+        <div>
+            <a href="index.html">მთავარი</a>
+            <a href="about.html">ჩვენს შესახებ</a>
+            <a href="properties.html">ობიექტები</a>
+            <a href="contact.html">კონტაქტი</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>MBG Group</h1>
+        <p>საქართველოს უძრავი ქონების ბაზრის ლიდერი — ექსკლუზიური ობიექტები, პრემიუმ სერვისი, 11 წლიანი გამოცდილება.</p>
+        <a href="properties.html" class="btn">ობიექტები იხილეთ →</a>  
+
+  </div>
+<!-- SERVICES -->
+<div class="services">
+    <div class="service-card">
+        <div class="icon">🏞</div>
+        <h3>კახეთის ობიექტები</h3>
+        <p>ვენახები, შატოები, მარნები და ტურისტული ობიექტები კახეთის ისტორიულ მიკროზონებში.</p>
+    </div>
+    <div class="service-card">
+        <div class="icon">🏡</div>
+        <h3>პრემიუმ საცხოვრებელი</h3>
+        <p>პრემიუმ კლასის საცხოვრებელი კომპლექსები და ტურისტული ლოკაციები საქართველოში.</p>
+    </div>
+    <div class="service-card">
+        <div class="icon">🏰</div>
+        <h3>ისტორიული ძეგლები</h3>
+        <p>სასახლეები და შატოები განსაკუთრებული არქიტექტურული და საინვესტიციო ღირებულებით.</p>
+    </div>
+</div>
+    
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 MBG Group. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
